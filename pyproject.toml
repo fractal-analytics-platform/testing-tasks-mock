@@ -27,3 +27,16 @@ include = ["testing_tasks_mock"]
 # Always include the __FRACTAL_MANIFEST__.json file in the package
 [tool.setuptools.package-data]
 "*" = ["__FRACTAL_MANIFEST__.json"]
+
+[tool.bumpver]
+current_version = "0.0.1"
+version_pattern = "MAJOR.MINOR.PATCH[PYTAGNUM]"
+commit_message = "bump version {old_version} -> {new_version}"
+commit = true
+tag = true
+push = true
+
+[tool.bumpver.file_patterns]
+"pyproject.toml" = ['version = "{version}"$']
+"src/testing_tasks_mock/__init__.py" = ['__VERSION__ = "{version}"$']
+
