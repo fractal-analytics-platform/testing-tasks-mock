@@ -1,2 +1,8 @@
-# testing-tasks-mock
-Fake package of Fractal tasks, to be used for testing
+
+
+## How to make a release
+From the development environment:
+```
+bumpver update --patch --dry
+```
+
